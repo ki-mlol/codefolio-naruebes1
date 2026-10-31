@@ -1,0 +1,146 @@
+:root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --ink: #1c2230;
+    --muted: #6b7385;
+    --line: #e6e8ee;
+    --accent: #d62839;
+    --radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans Thai", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.profile {
+    padding: clamp(32px, 6vw, 72px) 0;
+}
+
+.container {
+    max-width: 960px;
+}
+
+/* ---------- Profile ---------- */
+.profile-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: clamp(24px, 5vw, 48px);
+}
+
+.profile-photo {
+    width: min(220px, 100%);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--surface);
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.badge-custom {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 2px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: rgba(214, 40, 57, 0.08);
+    border-radius: 999px;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.profile-sub {
+    margin: 4px 0 24px;
+    color: var(--muted);
+}
+
+.info-list {
+    border-top: 1px solid var(--line);
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.info-item span {
+    color: var(--muted);
+}
+
+.info-item strong {
+    font-weight: 500;
+    text-align: right;
+}
+
+/* ---------- Works ---------- */
+.works {
+    margin-top: clamp(40px, 7vw, 80px);
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 4px 0 0;
+    color: var(--muted);
+}
+
+.work-card {
+    height: 100%;
+    padding: 16px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s ease;
+}
+
+.work-card:hover {
+    border-color: var(--accent);
+}
+
+.work-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.work-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-card {
+        transition: none;
+    }
+}
